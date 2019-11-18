@@ -1,2 +1,15 @@
-<h1 align=center>hello word</h1>
-<app-produit></app-produit>
+
+<div class="row">
+  <div class="col-lg-2" *ngIf="showHideSideBar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-lg-10">
+    <app-navbar [showSideBar]="showHideSideBar"
+    (showSideBarChange)="onShowSideBareChange($event)"
+    > </app-navbar>
+    <app-content></app-content>
+  </div>
+
+</div>
+
+<!--<app-produit></app-produit>-->
