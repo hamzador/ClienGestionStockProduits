@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';//module externe
 import { NgModule } from '@angular/core';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -11,7 +13,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule} from './app.routing.module';
-
+import {ProduitService} from './produit/produit.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +26,11 @@ import { AppRoutingModule} from './app.routing.module';
   ],
   imports: [//liste des modeles externes
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [ProduitMockService],//contient la listes des servicesutiliser dans notre app
+  providers: [ProduitMockService,ProduitService],//contient la listes des servicesutiliser dans notre app
   bootstrap: [AppComponent]//contient les point d'entre de notre programme
 })
 export class AppModule { }
