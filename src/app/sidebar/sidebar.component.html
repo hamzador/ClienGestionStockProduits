@@ -2,10 +2,10 @@
 <nav class="hidden-xs-down bg-faded sidebar">
   <ul class="nav nav-pills flex-column">
     <li class="nav-item">
-      <a  class="nav-link " routerLink="/dashboard" routerLinkActive = "active" > Dashboard </a>
+      <a  class="nav-link " [routerLink]="[{outlets:{contentOutlet:'dashboard'}}]" routerLinkActive = "active" > Dashboard </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " routerLink="/produit" routerLinkActive = "active" >Sell Produit </a>
+      <a class="nav-link "[routerLink]="[{outlets:{contentOutlet:'produit'}}]" routerLinkActive = "active" >Sell Produit </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Home Services</a>
