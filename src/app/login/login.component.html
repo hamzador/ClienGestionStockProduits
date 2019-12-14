@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+<!--
+<div >
+  <form [formGroup]="loginForm" (submit)="login()">
+    <div >
+      <label >Username: </label>
+
+      <input type="text" id="username" name="username" formControlName="username" [(ngModel)]="credentials.username" >
+    </div>
+
+    <div >
+      <label >Password: </label>
+      <input type="password" id="password" name="password" formControlName="password" [(ngModel)]="credentials.password" >
+    </div>
+
+    <button type="submit" >Log In</button>
+  </form>
+</div>
+
+-->
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://cxm.world/wp-content/uploads/2018/02/khadmat.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (submit)="login()">
+      <input type="text" id="username" name="username" formControlName="username" [(ngModel)]="credentials.username" class="fadeIn second"  placeholder="login">
+      <input type="password" id="password" name="password" formControlName="password" [(ngModel)]="credentials.password" class="fadeIn third"  placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+
+  </body>
+</html>

@@ -1,15 +1,5 @@
+<div class="container body">
+  <router-outlet>
 
-<div class="row">
-  <div class="col-lg-2" *ngIf="showHideSideBar">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="col-lg-10">
-    <app-navbar [showSideBar]="showHideSideBar"
-    (showSideBarChange)="onShowSideBareChange($event)"
-    > </app-navbar>
-    <app-content></app-content>
-  </div>
-
+  </router-outlet>
 </div>
-
-<!--<app-produit></app-produit>-->

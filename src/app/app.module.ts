@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';//module externe
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import {CookieService} from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
 import { ProduitComponent}from './produit/produit.component';
@@ -14,6 +14,11 @@ import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule} from './app.routing.module';
 import {ProduitService} from './produit/produit.service';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AppService } from './app.service';
+import {XhrInterceptor} from './xhr.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +26,9 @@ import {ProduitService} from './produit/produit.service';
     NavbarComponent,
     SidebarComponent,
     ContentComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent,
+    HomeComponent
 
   ],
   imports: [//liste des modeles externes
@@ -30,7 +37,13 @@ import {ProduitService} from './produit/produit.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ProduitMockService,ProduitService],//contient la listes des servicesutiliser dans notre app
+  providers: [
+    ProduitMockService,
+    ProduitService,
+    AppService,
+    {provide: HTTP_INTERCEPTORS, useClass: XhrInterceptor, multi: true},
+    CookieService
+  ],//contient la listes des servicesutiliser dans notre app
   bootstrap: [AppComponent]//contient les point d'entre de notre programme
 })
 export class AppModule { }

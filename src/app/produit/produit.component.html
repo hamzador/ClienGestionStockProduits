@@ -46,7 +46,7 @@
           <div class="form-group">
             <label> References: </label>
             <input type="text" class="form-control" formControlName="ref"
-             placeholder="Enter name of your product" [(ngModel)]="selectedProduit.ref">
+              [(ngModel)]="selectedProduit.ref">
           </div>
 
           <div class="alert alert-danger" *ngIf="produitForm.controls['ref'].invalid &&
@@ -81,7 +81,7 @@
         </p>
         <p class=""> voulez-vous Supprimer ce produit ?</p>
 
-        <button class="btn btn-success"[disabled]="!selectedProduit.ref" (click)= "deleteProduit()"> Confirmer </button>
+        <button class="btn btn-success" [(disabled)] ="!selectedProduit.ref" (click)= "deleteProduit()"> Confirmer </button>
       </div>
 
     </div>
