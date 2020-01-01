@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core'
 import { RouterModule, Routes} from '@angular/router'
 import {ProduitComponent} from './produit/produit.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {UserComponent} from './user/user.component';
 import {ProduitResolver} from './produit/produit.resolver';
 import { HomeComponent} from './home/home.component';
 import { LoginComponent} from './login/login.component';
@@ -29,7 +30,12 @@ export const appRoutes: Routes = [
       path: 'dashboard',
       component: DashboardComponent,
       outlet: 'contentOutlet'
-  }
+  },
+    {
+      path: 'user',
+      component: UserComponent,
+      outlet: 'contentOutlet'
+    }
 
   ]
 
