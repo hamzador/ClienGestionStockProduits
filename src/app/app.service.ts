@@ -12,25 +12,39 @@ export class AppService {
   authenticated: boolean = false ;
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
+
+
   authenticate(credentials, callback){
+    console.log("benali 1");
     //principe de mock
     if(credentials){
+      console.log("username : "+credentials.username);//ok
+      console.log("password : "+credentials.password);//ok
       const token = btoa(credentials.username + ':' + credentials.password);
+      console.log("benali befor btoa");//ok
       this.cookieService.set('token', token);//enregistrer les cookies
-    //  const headers = new HttpHeaders({
+      console.log("benali after btoa");//ok
+      //  const headers = new HttpHeaders({
       //  autorization: 'Basic '+ token
       //});
+
+      console.log("url : "+this.http.get(API_URLS.PRODUITS_URL));//ok
       this.http.get(API_URLS.USER_URL).subscribe(response =>{
+        console.log("Aprés API_URLS.USER_URL");//not ok
         if(response && response['name']){
+          console.log("benali 2");
           this.authenticated = true;
         }
         else{
+          console.log("benali 3");
           this.authenticated = false;
         }
+        console.log("benali 4");
           return callback && callback();
       });
     }
     else{
+      console.log("benali 5");
       this.authenticated= false;
     }
   }
