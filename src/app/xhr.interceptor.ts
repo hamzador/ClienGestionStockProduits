@@ -14,7 +14,7 @@ constructor(private cookieService: CookieService){}
       const token = this.cookieService.get('token');
 //    const token = btoa('user'+ ':' + 'password');
 
-    const xhr =req.clone({//cole faire une coupier de cette objet
+    const xhr =req.clone({//cole faire une copier de cette objet
       headers:req.headers.set('authorization',`Basic ${token}`)
     });
     return next.handle(xhr);

@@ -21,14 +21,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm =this.fb.group({
       username : ['',[Validators.required, Validators.minLength(3)]],
-      password : ['', [Validators.required,, Validators.minLength(6)]]
+      password : ['', [Validators.required, Validators.minLength(6)]]
     });
   }
   login(){
     console.log('hello1');
     this.appService.authenticate(this.credentials, ()=>{
-      console.log('hello2');
-      this.router.navigateByUrl('/home/(contentOutlet:produit)');
+        console.log('hello2');
+        this.router.navigateByUrl('/home/(contentOutlet:produit)');
     })
   }
 
