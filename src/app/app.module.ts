@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {CookieService} from 'ngx-cookie-service';
+import  {StoreModule} from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { ProduitComponent}from './produit/produit.component';
@@ -19,7 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { AppService } from './app.service';
 import {XhrInterceptor} from './xhr.interceptor';
 import { UserComponent } from './user/user.component';
-
+import {principalReducer} from './shared/principal.reducer'
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { UserComponent } from './user/user.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({principal: principalReducer})
   ],
   providers: [
     ProduitMockService,
