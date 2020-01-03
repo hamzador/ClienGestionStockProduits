@@ -13,28 +13,31 @@ import {DataModel} from "../shared/data.model";
 })
 export class ProduitComponent implements OnInit{
 
-  produitModel:DataModel[];
+  produits: Produit[];
 
   produitForm: FormGroup;
 
-  produits : Produit[];
+  produit = new Produit();
 
-  produit : Produit= new Produit();
-  constructor(private produitService: ProduitService, private fb:FormBuilder, private route: ActivatedRoute){
+  produitsModel: DataModel[];
+
+  constructor(public produitService: ProduitService, private fb: FormBuilder, private route: ActivatedRoute){
+
   }
- ngOnInit(){
-  this.produits = this.route.snapshot.data.produits;
-   this.produitForm = this.fb.group({
-     ref: ['', Validators.required],
-     quantite: '',
-     prixUnitaire: ''
-   });
-   this.produitModel = [
-     new DataModel('id','ID','number',true,[]),
-     new DataModel('ref','Référence','string',false,[]),
-     new DataModel('quantite','Quantité','number',false,[]),
-     new DataModel('prixUnitaire','Prix Unitaire ','number',false,[])
-   ]
-}
 
+  ngOnInit(){
+    this.produits = this.route.snapshot.data.produits;
+    this.produitForm = this.fb.group({
+      ref: ['', Validators.required],
+      quantite: '',
+      prixUnitaire: ''
+    });
+
+    this.produitsModel = [
+      new DataModel('id','ID','number',true,[]),
+      new DataModel('ref','Référence','string',false,[]),
+      new DataModel('quantite','Quantité','number',false,[]),
+      new DataModel('prixUnitaire','Prix Unitaire','number',false,[])
+    ]
+  }
 }

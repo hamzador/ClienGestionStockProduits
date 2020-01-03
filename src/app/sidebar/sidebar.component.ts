@@ -17,7 +17,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.store.select('principal').subscribe(principal => {
-      console.log("principal------"+principal);
       this.principal = principal;
     });
   }

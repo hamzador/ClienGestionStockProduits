@@ -22,7 +22,6 @@ export class AppService {
 
   authenticate(credentials, callback){
     //console.log(" 1");
-    //principe de mock
     if(credentials){
      // console.log("username : "+credentials.username);//ok
      // console.log("password : "+credentials.password);//ok

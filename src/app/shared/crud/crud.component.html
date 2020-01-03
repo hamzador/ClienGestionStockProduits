@@ -1,4 +1,4 @@
-
+<ng-container *ngIf="data; else loading">
 <!--<ul>
   <li *ngFor ="let produit of produits">
   Ref: {{produit.ref}}, Quantité: {{produit.quantite}}, Prix Unitaire: {{produit.prixUnitaire}}
@@ -107,3 +107,7 @@
   </div>
 
 </div>
+</ng-container>
+<ng-template #loading>
+  Loding ....
+</ng-template>
