@@ -38,7 +38,7 @@ export class AppService {
       this.http.get(API_URLS.USER_URL).subscribe(response =>{
       //  console.log("Aprés API_URLS.USER_URL");//not ok
         if(response && response['name']){
-          console.log("response"+response);
+          console.log("response " + response);
           this.authenticated = true;
           this.store.dispatch({
             type: SAVE_PRINCIPAL,
