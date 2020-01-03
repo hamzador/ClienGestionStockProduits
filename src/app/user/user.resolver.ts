@@ -1,19 +1,19 @@
 import {Injectable} from '@angular/core';
 import { Resolve } from '@angular/router';
-import { ProduitService } from './produit.service';
+import { UserService } from "./user.service";
 
 @Injectable(
   //{
 //  providedIn: 'root'
 //}
 )
-export class ProduitResolver implements Resolve<any>{
+export class UserResolver implements Resolve<any>{
 
-  constructor(private productService:ProduitService){
+  constructor(private userService:UserService){
 
   }
   resolve(){
     //return this.productService.getAll();
-    return this.productService.getAll();
+    return this.userService.getAll();
   }
 }
