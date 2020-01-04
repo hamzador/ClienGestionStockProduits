@@ -23,7 +23,8 @@ import { AppService } from './app.service';
 import {XhrInterceptor} from './xhr.interceptor';
 import { UserComponent } from './user/user.component';
 import {principalReducer} from './shared/principal.reducer';
-import { CrudComponent } from './shared/crud/crud.component'
+import { CrudComponent } from './shared/crud/crud.component';
+import { MyChartComponent } from './my-chart/my-chart.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { CrudComponent } from './shared/crud/crud.component'
     LoginComponent,
     HomeComponent,
     UserComponent,
-    CrudComponent
+    CrudComponent,
+    MyChartComponent
 
   ],
   imports: [//liste des modeles externes
