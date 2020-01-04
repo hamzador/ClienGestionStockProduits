@@ -9,16 +9,17 @@ import {Produit} from "../shared/produit.model";
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  usersData ={
+  productsData = {
     labels: [],
-    datashets:[]
-};
-  produitsData ={
-    labels: [],
-    datashets:[]
+    datasets: []
   };
-  constructor(private produitService: ProduitService,private userService: UserService) { }
+
+  usersData = {
+    labels: [],
+    datasets: []
+  };
+
+  constructor(private productService: ProduitService, private userService: UserService) { }
 
   ngOnInit() {
     const datasetsQuantite = {
@@ -35,21 +36,15 @@ export class DashboardComponent implements OnInit {
       borderColor: 'rgb(255, 99, 132)'
     };
 
-
-    this.produitService.getAll().subscribe(list=> list.forEach(produit => {
-      this.produitsData.labels.push(produit.ref);
-      //console.log("produits"+produit.ref+"quantity="+produit.quantite);
-      datasetsQuantite.data.push(produit.quantite);
-    //  console.log("++++"+datasetsQuantite.label+" "+datasetsQuantite.data)
-      datasetsPrixUnitaire.data.push(produit.prixUnitaire);
-
-      /*****************************************************************************************************************/
-
+    this.productService.getAll().subscribe(list=> list.forEach(product => {
+      this.productsData.labels.push(product.ref);
+      datasetsQuantite.data.push(product.quantite);
+      datasetsPrixUnitaire.data.push(product.prixUnitaire);
     }));
-    this.produitsData.datashets.push(datasetsQuantite);
-    console.log("this.produitsData.datashets= "+this.produitsData.datashets.length)
-    this.produitsData.datashets.push(datasetsPrixUnitaire);
-    console.log(this.produitsData);
+
+    this.productsData.datasets.push(datasetsQuantite);
+    this.productsData.datasets.push(datasetsPrixUnitaire);
+    console.log(this.productsData);
 
 
     const datasetsUser = {
