@@ -11,9 +11,11 @@ export class MyChartComponent implements OnInit {
   type : string = 'bar';
   @Input()
   title :string='Titre';
+//datasets
+  @Input()
   data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [
+    datashets: [
       {
         label: "My dataset 1",
         data: [65, 59, 80, 81, 56, 55, 40]
@@ -24,6 +26,7 @@ export class MyChartComponent implements OnInit {
       }
     ]
   };
+  @Input()
   options = {
     responsive: true,
     maintainAspectRatio: false
@@ -32,5 +35,8 @@ export class MyChartComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  // ngAfterViewChecked() {
+  //   this.ghraphElement.chart.update();
+  //
+  // }
 }

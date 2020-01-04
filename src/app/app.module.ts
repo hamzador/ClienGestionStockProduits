@@ -45,8 +45,9 @@ import { MyChartComponent } from './my-chart/my-chart.component'
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forRoot({principal: principalReducer}),
-    ChartModule
+    ChartModule,
+    StoreModule.forRoot({principal: principalReducer})
+
   ],
   providers: [
     ProduitMockService,
