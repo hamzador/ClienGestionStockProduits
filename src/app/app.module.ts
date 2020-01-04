@@ -4,6 +4,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {CookieService} from 'ngx-cookie-service';
 import  {StoreModule} from '@ngrx/store';
+import { ChartModule } from 'angular2-chartjs';
 
 import { AppComponent } from './app.component';
 import { ProduitComponent}from './produit/produit.component';
@@ -42,7 +43,8 @@ import { CrudComponent } from './shared/crud/crud.component'
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forRoot({principal: principalReducer})
+    StoreModule.forRoot({principal: principalReducer}),
+    ChartModule
   ],
   providers: [
     ProduitMockService,
