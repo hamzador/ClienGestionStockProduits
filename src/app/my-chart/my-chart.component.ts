@@ -23,7 +23,9 @@ export class MyChartComponent implements OnInit {
         data: [80, 59, 12, 81, 56, 55, 10]
       }
     ]
+
   };
+
   options = {
     responsive: true,
     maintainAspectRatio: false
@@ -31,6 +33,7 @@ export class MyChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.data)
   }
 
 }
