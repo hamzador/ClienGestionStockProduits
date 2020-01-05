@@ -7,6 +7,8 @@ import {ProduitResolver} from './produit/produit.resolver';
 import {UserResolver} from "./user/user.resolver";
 import { HomeComponent} from './home/home.component';
 import { LoginComponent} from './login/login.component';
+import {RegisterComponent} from "./register/register.component";
+import {PostComponent} from "./post/post.component";
 
 
 export const appRoutes: Routes = [
@@ -17,9 +19,10 @@ export const appRoutes: Routes = [
 },
   {
     path: 'register',
-    component: LoginComponent
+    component: RegisterComponent
 
   },
+
 {
   path: 'home',
   component: HomeComponent,
@@ -37,6 +40,12 @@ export const appRoutes: Routes = [
       component: DashboardComponent,
       outlet: 'contentOutlet'
   },
+    {
+      path: 'poste',
+      component: PostComponent,
+      outlet: 'contentOutlet'
+
+    },
     {
       path: 'user',
       component: UserComponent,

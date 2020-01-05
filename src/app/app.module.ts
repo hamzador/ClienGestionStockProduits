@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';//module externe
 import { NgModule } from '@angular/core';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {CookieService} from 'ngx-cookie-service';
 import  {StoreModule} from '@ngrx/store';
@@ -25,7 +25,9 @@ import { UserComponent } from './user/user.component';
 import {principalReducer} from './shared/principal.reducer';
 import { CrudComponent } from './shared/crud/crud.component';
 import { MyChartComponent } from './my-chart/my-chart.component';
-import { RegisterComponent } from './register/register.component'
+import { RegisterComponent } from './register/register.component';
+import { PostComponent } from './post/post.component'
+import {CommentService} from "./post/comment.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,8 @@ import { RegisterComponent } from './register/register.component'
     UserComponent,
     CrudComponent,
     MyChartComponent,
-    RegisterComponent
+    RegisterComponent,
+    PostComponent
 
   ],
   imports: [//liste des modeles externes
@@ -48,7 +51,8 @@ import { RegisterComponent } from './register/register.component'
     ReactiveFormsModule,
     HttpClientModule,
     ChartModule,
-    StoreModule.forRoot({principal: principalReducer})
+    StoreModule.forRoot({principal: principalReducer}),
+    FormsModule
 
   ],
   providers: [
@@ -57,7 +61,8 @@ import { RegisterComponent } from './register/register.component'
     AppService,
     {provide: HTTP_INTERCEPTORS, useClass: XhrInterceptor, multi: true},
     CookieService,
-    UserService
+    UserService,
+    CommentService
   ],//contient la listes des servicesutiliser dans notre app
   bootstrap: [AppComponent]//contient les point d'entre de notre programme
 })

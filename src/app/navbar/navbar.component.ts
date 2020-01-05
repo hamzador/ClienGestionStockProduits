@@ -33,6 +33,9 @@ logout(){
   });
 
 }
+  clickService(){
+    this.router.navigateByUrl('/home/(contentOutlet:poste)');
+  }
   // searchForm:FormGroup;
   // search(){
   //

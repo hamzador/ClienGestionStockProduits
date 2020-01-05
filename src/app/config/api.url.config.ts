@@ -1,9 +1,10 @@
-
+let port=59811;
 export const API_URLS = {
 
-    PRODUITS_URL : 'http://localhost:9638/api/produit',
-  USER_URL: 'http://localhost:9638/api/user',
-  USER_CRUD_URL: 'http://localhost:9638/api/crud_user'
+    PRODUITS_URL : 'http://localhost:'+port+'/api/produit',
+  USER_URL: 'http://localhost:'+ port+'/api/user',
+  USER_CRUD_URL: 'http://localhost:'+ port+'/api/crud_user',
+  POST_COMMENT: 'http://localhost:'+ port+'/api/comments'
 
 
 
