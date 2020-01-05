@@ -34,6 +34,7 @@ export class MyChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
   // ngAfterViewChecked() {
   //   this.ghraphElement.chart.update();

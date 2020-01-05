@@ -24,7 +24,8 @@ import {XhrInterceptor} from './xhr.interceptor';
 import { UserComponent } from './user/user.component';
 import {principalReducer} from './shared/principal.reducer';
 import { CrudComponent } from './shared/crud/crud.component';
-import { MyChartComponent } from './my-chart/my-chart.component'
+import { MyChartComponent } from './my-chart/my-chart.component';
+import { RegisterComponent } from './register/register.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { MyChartComponent } from './my-chart/my-chart.component'
     HomeComponent,
     UserComponent,
     CrudComponent,
-    MyChartComponent
+    MyChartComponent,
+    RegisterComponent
 
   ],
   imports: [//liste des modeles externes
