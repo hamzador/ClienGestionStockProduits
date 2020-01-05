@@ -1,8 +1,12 @@
 import {Injectable} from '@angular/core';
-import {Produit} from '../shared/produit';
+import {Produit} from '../shared/produit.model';
+import {CrudService} from "../shared/crud.service";
+import {HttpClient} from "@angular/common/http";
+import {Observable, of} from "rxjs";
+import {API_URLS} from "../config/api.url.config";
 
 @Injectable()//injecter ce service dans plusieurs composant
-export class ProduitMockService{
+export class ProduitMockService implements  CrudService{
 
   private PRODUITS: Produit[] = [];
   constructor(){
@@ -14,7 +18,19 @@ export class ProduitMockService{
     this.PRODUITS.push(p3);
   }
 
-  public getProduits(): Produit[]{
-    return this.PRODUITS;
-  }
+
+  getAll(): Observable<any>{
+    return of(this.PRODUITS);
+}
+  add(produit ): Observable<any>{
+    return of('Success');
+}
+  update(produit): Observable<any>{
+    return of('Success');
+}
+  delete(id): Observable<any>{
+    return of('Success');
+}
+
+
 }

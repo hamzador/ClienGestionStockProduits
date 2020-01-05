@@ -1,0 +1,275 @@
+.hero {
+  background-image: url('/assets/images/background.jpg') !important;
+  background-size: cover;
+  background-position: center center;
+}
+
+.navbar {
+  margin-bottom: 0%;
+}
+
+
+
+
+
+/*Downloaded from https://www.codeseek.co/paulkmiller/bulma-search-bar-jywwqa */
+.landing-container {
+  padding: 50px;
+}
+.landing-container .search-box {
+  height: 80px;
+  padding: 10px;
+}
+
+.search-block, .price-block, .extras-block {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin-top: -10px;
+  border-right: 2px solid rgba(10, 10, 10, 0.1);
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.search-block.focus, .price-block.focus, .extras-block.focus {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+.price-block .button {
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: 1px solid #b1b1b1;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  margin-right: 4px;
+  color: #4c4c4c;
+  padding: 0 .825em;
+  z-index: 0;
+  border-radius: 0px;
+  border: 0px;
+}
+.price-block .button span {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  padding-bottom: 5px;
+  font-size: 1.5em;
+  background: none;
+  color: #a9a9a9;
+  width: 90%;
+  height: 30px;
+  border: none;
+  appearance: none;
+  outline: none;
+}
+.price-block .dropdown-container {
+  padding-bottom: 0;
+  width: 100%;
+  border-radius: 0;
+  border-top: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  font-size: 14px;
+  padding: 0;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.172549) 0 6px 12px 0;
+  visibility: hidden;
+}
+.price-block .dropdown-container.is-open {
+  visibility: visible;
+}
+.price-block .dropdown-container .dropdown {
+  display: inline-block;
+  margin: 0;
+  border-top: 1px solid #cccccc;
+  width: 100%;
+}
+.price-block .dropdown-container .dropdown .range-container {
+  height: 60px;
+  margin: 20px 0 10px;
+  border-bottom: 1px solid #ccc;
+}
+.price-block .dropdown-container .dropdown .range-container .left-input {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 50%;
+  z-index: 11;
+}
+.price-block .dropdown-container .dropdown .range-container .left-input input {
+  width: 100%;
+  max-width: 100% !important;
+  line-height: 26px;
+  height: 40px;
+  padding-left: 6px;
+  background-color: #fff;
+  text-align: left;
+  border: solid 1px #ccc;
+  outline-width: 1px;
+  outline-color: #009688;
+}
+.price-block .dropdown-container .dropdown .range-container .right-input {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 50%;
+  z-index: 11;
+}
+.price-block .dropdown-container .dropdown .range-container .right-input input {
+  width: 100%;
+  max-width: 100% !important;
+  line-height: 26px;
+  height: 40px;
+  padding-left: 6px;
+  background-color: #fff;
+  text-align: left;
+  border: solid 1px #ccc;
+  outline-width: 1px;
+  outline-color: #009688;
+}
+.price-block .dropdown-container .dropdown .range-container:before {
+  content: "-";
+  color: #ccc;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+  left: 0;
+  z-index: 10;
+}
+.price-block .dropdown-container .dropdown .options-container {
+  width: 100%;
+  margin: 0px;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+}
+.price-block .dropdown-container .dropdown .options-container p {
+  font-weight: bold;
+}
+.price-block .dropdown-container .dropdown ul {
+  min-height: 245px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  background-color: #fff;
+}
+.price-block .dropdown-container .dropdown ul li {
+  padding-left: 15px;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+}
+.price-block .dropdown-container .dropdown ul li:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.price-block .dropdown-container .dropdown ul.max-options li {
+  padding-right: 15px;
+  text-align: right;
+}
+
+.search-label, .price-label {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  color: #5a6674;
+  z-index: 999;
+}
+
+.search-input {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  padding-bottom: 5px;
+  font-size: 1.5em;
+  background: none;
+  color: #5a6674;
+  width: 90%;
+  height: 30px;
+  border: none;
+  appearance: none;
+  outline: none;
+  padding-left: 30px;
+}
+.search-input::-webkit-search-cancel-button {
+  appearance: none;
+}
+.search-input:focus {
+  border-bottom: 1px solid #009688;
+}
+
+.landing-container .search-box {
+  height: 80px;
+  padding: 10px 0 10px 10px;
+}
+.landing-container .search-box .search-button {
+  width: 100%;
+  height: 80px;
+  margin-top: -10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-left: 0px;
+}
+
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.checkbox input[type=checkbox], label input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: 0;
+  pointer-events: none;
+}
+
+.checkbox .checkbox-material .check {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.checkbox input[type=checkbox]:checked ~ .checkbox-material .check {
+  color: #009688;
+  padding: 1px 0 0px 1px;
+}
+
+.checkbox .checkbox-material {
+  vertical-align: middle;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
+
+.checkbox input[type=checkbox]:checked ~ .checkbox-material .check:before {
+  color: #009688;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f00c";
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
