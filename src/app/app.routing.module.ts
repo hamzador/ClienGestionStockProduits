@@ -15,6 +15,11 @@ export const appRoutes: Routes = [
     component: LoginComponent
 
 },
+  {
+    path: 'register',
+    component: LoginComponent
+
+  },
 {
   path: 'home',
   component: HomeComponent,

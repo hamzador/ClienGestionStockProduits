@@ -1,18 +1,20 @@
 <div>
+<div>
   <div class="row">
     <div class="col-lg-5">
       <app-my-chart
         [type]="'bar'"
-        [title]="'Client par Catégorie'">
+        [title]="'Produits par catégorie'"
+        [data]="productsData"
+      >
       </app-my-chart>
-      <!--line pour user-->
     </div>
     <div class="col-lg-7">
       <app-my-chart
         [type]="'line'"
-        [title]="'présentation linéaire des Catégories'"
+        [title]="'présentation linéaire des produits'"
+        [data]="productsData"
       ></app-my-chart>
-      <!--line pour produit-->
     </div>
   </div>
 </div>
@@ -20,21 +22,23 @@
 
 
 <hr color="red "/>
-<div>
-  <div class="row">
-    <div class="col-lg-5">
-      <app-my-chart
-        [type]="'bar'"
-        [title]="'Client par Catégorie'">
-      </app-my-chart>
-      <!--line pour user-->
-    </div>
-    <div class="col-lg-7">
-      <app-my-chart
-        [type]="'line'"
-        [title]="'présentation linéaire des Catégories'"
-      ></app-my-chart>
-      <!--line pour produit-->
-    </div>
+<div class="row">
+  <div class="col-lg-7">
+    <app-my-chart
+      [type]="'line'"
+      [title]="'Réprésentation linéaire des utilisateurs'"
+      [data]="usersData"
+    >
+    </app-my-chart>
+  </div>
+  <div class="col-lg-5">
+    <app-my-chart
+      [type]="'bar'"
+      [title]="'Utilisateurs par role'"
+      [data]="usersData"
+    ></app-my-chart>
   </div>
 </div>
+
+</div>
+
