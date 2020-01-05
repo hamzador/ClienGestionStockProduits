@@ -26,6 +26,7 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { RegisterComponent } from './user/register/register.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ContactComponent } from './contact/contact.component';
     UserComponent,
     HeaderComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    RegisterComponent
 
   ],
   imports: [ // liste des modules externes
