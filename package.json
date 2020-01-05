@@ -19,6 +19,8 @@
     "@angular/platform-browser": "^8.2.14",
     "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/router": "^8.2.14",
+    "@ngrx/store": "^8.6.0",
+    "angular2-chartjs": "^0.5.1",
     "bootstrap": "^3.4.1",
     "bulma": "^0.8.0",
     "cors": "^2.8.5",

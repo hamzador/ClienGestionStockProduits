@@ -1,5 +1,5 @@
-export class Principal{
-  constructor(public authorities: any){
+export class Principal {
+  constructor(public authorities: any) {
   }
 
 
