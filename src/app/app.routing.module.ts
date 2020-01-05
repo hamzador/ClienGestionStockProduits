@@ -14,6 +14,15 @@ export const appRoutes: Routes = [
     component: LoginComponent
 
 },
+
+  {
+    path: 'produit',
+    component: ProduitComponent,
+    },
+  {
+    path: 'user',
+    component: UserComponent
+  },
 {
   path: 'home',
   component: HomeComponent,
@@ -40,6 +49,8 @@ export const appRoutes: Routes = [
   ]
 
 },
+
+
 
  {
    path: '',
