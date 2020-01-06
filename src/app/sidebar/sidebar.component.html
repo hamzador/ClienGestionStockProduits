@@ -4,16 +4,16 @@
     <li class="nav-item">
       <a  class="nav-link " [routerLink]="[{outlets:{contentOutlet:'dashboard'}}]"
 
-          routerLinkActive = "active" > Dashboard </a>
-    </li><!--*ngIf="hasRoleUser()"-->
+          routerLinkActive = "active" *ngIf="hasRoleAdmin()" > Dashboard </a>
+    </li><!---->
     <li class="nav-item">
       <a class="nav-link "[routerLink]="[{outlets:{contentOutlet:'produit'}}]"
 
-         routerLinkActive = "active" >Sell Product </a><!--*ngIf="hasRoleUser()"-->
+         routerLinkActive = "active" *ngIf="hasRoleUser()">Sell Product </a><!--*-->
     </li>
     <li class="nav-item">
-      <a class="nav-link "[routerLink]="[{outlets:{contentOutlet:'user'}}]"  routerLinkActive = "active"  >Users</a>
-<!--   *ngIf="hasRoleAdmin()"   "-->
+      <a class="nav-link "[routerLink]="[{outlets:{contentOutlet:'user'}}]"  routerLinkActive = "active"*ngIf="hasRoleAdmin()"   >Users</a>
+<!--     "-->
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Home Services</a>

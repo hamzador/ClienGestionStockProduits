@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { PrincipalState } from '../shared/principal.state';
 import { Principal } from '../shared/principal.model';
 
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -11,21 +12,20 @@ import { Principal } from '../shared/principal.model';
 })
 export class SidebarComponent implements OnInit {
 
-  private  principal : Principal;
-
+  private principal: Principal;
   constructor(private store: Store<PrincipalState>) { }
 
   ngOnInit() {
     this.store.select('principal').subscribe(principal => {
       this.principal = principal;
     });
+    console.log("this.principal"+this.principal.authorities);
   }
-
 
   hasRoleUser(){
     let hasRole: boolean = false;
     this.principal.authorities.forEach(item => {
-      if (item.authority === "ROLE_USER") {
+      if (item.authority === 'ROLE_USER') {
         hasRole = true;
       }
     });
@@ -34,12 +34,16 @@ export class SidebarComponent implements OnInit {
 
   hasRoleAdmin(){
     let hasRole: boolean = false;
-    (this.principal.authorities|| []).forEach(item => {
-      if (item.authority === "ROLE_ADMIN") {
+    this.principal.authorities.forEach(item => {
+      if (item.authority === 'ROLE_ADMIN') {
         hasRole = true;
       }
     });
     return hasRole;
   }
+
+
+
+
 
 }

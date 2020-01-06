@@ -36,34 +36,29 @@ export class AppService {
       //console.log("url : "+this.http.get(API_URLS.PRODUITS_URL));//ok
       this.http.get(API_URLS.USER_URL).subscribe(response =>{
       //  console.log("Aprés API_URLS.USER_URL");//not ok
-        if(response && response['name']){
-          console.log("response " + response);
+        if (response && response['name']) {
+          console.log("response.toString()"+API_URLS.USER_URL);
           this.authenticated = true;
+
           this.store.dispatch({
             type: SAVE_PRINCIPAL,
             payload: response
           });
-        }
-        else{
-          //console.log(" 3");
+          console.log("this.authenticated")
+        } else {
           this.authenticated = false;
         }
-      //  console.log(" 4");
-          return callback && callback();
+        return callback && callback();
       });
     }
-    else{
-      //console.log(" 5");
-      this.authenticated= false;
+    else {
+      this.authenticated = false;
     }
   }
 
- logout(callback){
-  //  const _this = this;
-    //this.http.post('logout',{}).subscribe(()=>{
-    //  _this.authenticated=false;
-    //  return  this.authenticated;
-    //});
+  logout(callback){
+    this.authenticated = false;
     return callback && callback();
   }
+
 }
