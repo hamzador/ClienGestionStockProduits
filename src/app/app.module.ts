@@ -28,6 +28,7 @@ import { MyChartComponent } from './my-chart/my-chart.component';
 import { RegisterComponent } from './register/register.component';
 import { PostComponent } from './post/post.component'
 import {CommentService} from "./post/comment.service";
+import { ServiceComponent } from './post/service/service.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import {CommentService} from "./post/comment.service";
     CrudComponent,
     MyChartComponent,
     RegisterComponent,
-    PostComponent
+    PostComponent,
+    ServiceComponent
 
   ],
   imports: [//liste des modeles externes

@@ -36,6 +36,9 @@ logout(){
   clickService(){
     this.router.navigateByUrl('/home/(contentOutlet:poste)');
   }
+  AllPost(){
+    this.router.navigateByUrl('/home/(contentOutlet:allpost)');
+  }
   // searchForm:FormGroup;
   // search(){
   //

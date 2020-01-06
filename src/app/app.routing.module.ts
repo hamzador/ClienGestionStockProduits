@@ -9,6 +9,7 @@ import { HomeComponent} from './home/home.component';
 import { LoginComponent} from './login/login.component';
 import {RegisterComponent} from "./register/register.component";
 import {PostComponent} from "./post/post.component";
+import {ServiceComponent} from "./post/service/service.component";
 
 
 export const appRoutes: Routes = [
@@ -43,6 +44,18 @@ export const appRoutes: Routes = [
     {
       path: 'poste',
       component: PostComponent,
+      outlet: 'contentOutlet'
+
+    },
+    {
+      path: 'allpost',
+      component: ServiceComponent,
+      outlet: 'contentOutlet'
+
+    },
+    {
+      path: 'myMessage',
+      component: ,
       outlet: 'contentOutlet'
 
     },

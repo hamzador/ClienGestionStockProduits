@@ -1,0 +1,71 @@
+<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45; Include the above in your HEAD tag &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>-->
+
+<div class="container">
+  <div class="well">
+    <div class="media">
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-lg-7">-->
+      <table class="table table-hover">
+        <thead>
+            <tr>
+              <th>posts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let post of posts">
+              <td>
+                <div class="media">
+                  <div class="media-left">
+                    <img src="assets/post.png" class="media-object " style="width:60px">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">John {{post.idUser}}</h4>
+                    <p>{{post.body}}</p>
+                  </div>
+                  <button class="btn btn-outline-primary" (click)="sendMessage()">contacter</button>
+                </div>
+                <!--<a class="pull-left" href="#">-->
+                <!--  <img class="media-object" src="http://placekitten.com/150/150">-->
+                <!--</a>-->
+                <!--<div class="media-body" >-->
+                <!--  <h4 class="media-heading">Receta 1</h4>-->
+                <!--  <p class="text-right">By {{post.idUser}}</p>-->
+                <!--  <p>         {{post.body}}             </p>-->
+                <!--  <ul class="list-inline list-unstyled">-->
+                <!--    <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>-->
+                <!--    <li>|</li>-->
+                <!--    <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>-->
+                <!--    <li>|</li>-->
+                <!--    <li>-->
+                <!--      <span class="glyphicon glyphicon-star"></span>-->
+                <!--      <span class="glyphicon glyphicon-star"></span>-->
+                <!--      <span class="glyphicon glyphicon-star"></span>-->
+                <!--      <span class="glyphicon glyphicon-star"></span>-->
+                <!--      <span class="glyphicon glyphicon-star-empty"></span>-->
+                <!--    </li>-->
+                <!--    <li>|</li>-->
+                <!--    <li>-->
+                <!--      &lt;!&ndash; Use Font Awesome http://fortawesome.github.io/Font-Awesome/ &ndash;&gt;-->
+                <!--      <span><i class="fa fa-facebook-square"></i></span>-->
+                <!--      <span><i class="fa fa-twitter-square"></i></span>-->
+                <!--      <span><i class="fa fa-google-plus-square"></i></span>-->
+                <!--    </li>-->
+                <!--  </ul>-->
+                <!--</div>-->
+
+              </td>
+            </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+

@@ -14,4 +14,17 @@ export class CommentService {
     return this.http.post(url, comment);
   }
 
+  getAll(): Observable<any>{
+    return this.http.get(API_URLS.POST_COMMENT);
+  }
+  add(entity ): Observable<any>{
+    return this.http.post(API_URLS.POST_COMMENT,entity);
+  }
+  update(entity): Observable<any>{
+    return this.http.put(API_URLS.POST_COMMENT, entity);
+  }
+  delete(id): Observable<any>{
+    return this.http.delete(API_URLS.POST_COMMENT + `/${id}` );
+  }
+
 }
