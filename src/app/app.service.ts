@@ -13,15 +13,11 @@ import {SAVE_PRINCIPAL} from "./shared/save.principal.action";
   providedIn: 'root'})
 export class AppService {
   authenticated: boolean = false ;
-  constructor(private http: HttpClient,
-              private cookieService: CookieService,
-              private  store :Store<PrincipalState>
-  ) { }
+  constructor(private http: HttpClient, private cookieService: CookieService) {}
 
 
 
   authenticate(credentials, callback){
-    //console.log(" 1");
     if(credentials){
       const token = btoa(credentials.username + ':' + credentials.password);
       this.cookieService.set('token', token);//enregistrer les cookies

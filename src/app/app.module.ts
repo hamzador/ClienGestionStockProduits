@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {CookieService} from 'ngx-cookie-service';
-import  {StoreModule} from '@ngrx/store';
+import {StoreModule} from '@ngrx/store';
 import { ChartModule } from 'angular2-chartjs';
 
 import { AppComponent } from './app.component';
@@ -32,6 +32,17 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { OwlModule } from 'ngx-owl-carousel';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
+import { RegisterComponent } from './user/register/register.component';
+import {UserService} from "./services/userService";
+import {AuthenticationService} from "./services/authentication.service";
+import {AlertService} from "./services/alert.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +57,11 @@ import { ContactComponent } from './contact/contact.component';
     CrudComponent,
     HeaderComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent,
+    FooterComponent,
+    ContactComponent,
+    RegisterComponent
 
   ],
   imports: [ // liste des modules externes
@@ -68,8 +83,10 @@ import { ContactComponent } from './contact/contact.component';
     AppService,
     {provide: HTTP_INTERCEPTORS, useClass: XhrInterceptor, multi: true},
     CookieService,
-    UserService
-  ], // contient la listes des servicesutiliser dans notre app
+    UserService,
+    AuthenticationService,
+    AlertService
+  ], // contient la listes des services utiliseés dans l'application
   bootstrap: [AppComponent] // contient les point d'entre de notre programme
 })
 export class AppModule { }
