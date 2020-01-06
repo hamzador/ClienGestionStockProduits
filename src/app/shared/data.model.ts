@@ -1,4 +1,3 @@
-
 export class DataModel {
   constructor(public columnName?: string,
               public columnReference?: string,

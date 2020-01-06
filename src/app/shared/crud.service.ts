@@ -8,7 +8,7 @@ export  interface CrudService {
 
     add(produit: Produit ): Observable<any>;
 
-    update(produit:Produit): Observable<any>;
+    update(produit: Produit): Observable<any>;
 
     delete(id: number): Observable<any>;
 

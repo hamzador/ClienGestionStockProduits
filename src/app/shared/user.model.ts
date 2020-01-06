@@ -1,10 +1,9 @@
-
 export  class User {
 
-  constructor(id?:number,
-              username?:string,
+  constructor(id?: number,
+              username?: string,
               firstName?: string,
               lastName?: string,
-              enable?:boolean ) {}
+              enable?: boolean ) {}
 
 }

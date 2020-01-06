@@ -18,6 +18,15 @@ export const appRoutes: Routes = [
     component: LoginComponent
 
 },
+
+  {
+    path: 'produit',
+    component: ProduitComponent,
+    },
+  {
+    path: 'user',
+    component: UserComponent
+  },
   {
     path: 'register',
     component: RegisterComponent
@@ -55,7 +64,7 @@ export const appRoutes: Routes = [
     },
     {
       path: 'myMessage',
-      component: ,
+      component: ServiceComponent,
       outlet: 'contentOutlet'
 
     },
@@ -71,6 +80,8 @@ export const appRoutes: Routes = [
   ]
 
 },
+
+
 
  {
    path: '',
