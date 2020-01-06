@@ -15,7 +15,7 @@ export class UserService implements  CrudService{
   getAll(): Observable<any>{
     return this.http.get(API_URLS.USER_CRUD_URL);
   }
-  add(user ): Observable<any>{
+  add(user): Observable<any>{
     return this.http.post(API_URLS.USER_CRUD_URL,user);
   }
   update(user): Observable<any>{

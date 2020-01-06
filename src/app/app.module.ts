@@ -27,6 +27,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { RegisterComponent } from './user/register/register.component';
+import {UserService} from "./services/userService";
+import {AuthenticationService} from "./services/authentication.service";
+import {AlertService} from "./services/alert.service";
 
 @NgModule({
   declarations: [
@@ -61,7 +64,10 @@ import { RegisterComponent } from './user/register/register.component';
     ProduitService,
     AppService,
     {provide: HTTP_INTERCEPTORS, useClass: XhrInterceptor, multi: true},
-    CookieService
+    CookieService,
+    UserService,
+    AuthenticationService,
+    AlertService
   ], // contient la listes des services utiliseés dans l'application
   bootstrap: [AppComponent] // contient les point d'entre de notre programme
 })
