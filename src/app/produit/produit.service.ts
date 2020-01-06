@@ -15,13 +15,13 @@ export class ProduitService implements  CrudService{
   getAll(): Observable<any>{
     return this.http.get(API_URLS.PRODUITS_URL);
   }
-  add(produit ): Observable<any>{
-    return this.http.post(API_URLS.PRODUITS_URL,produit);
+  add(entity ): Observable<any>{
+    return this.http.post(API_URLS.PRODUITS_URL,entity);
   }
-  update(produit): Observable<any>{
-    return this.http.put(API_URLS.PRODUITS_URL, produit);
+  update(entity): Observable<any>{
+    return this.http.put(API_URLS.PRODUITS_URL, entity);
   }
   delete(id): Observable<any>{
-    return this.http.delete(API_URLS.PRODUITS_URL +  id);
+    return this.http.delete(API_URLS.PRODUITS_URL + `/${id}` );
   }
 }

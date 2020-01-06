@@ -2,6 +2,7 @@ import { Component, OnInit, Input,Output,EventEmitter } from '@angular/core';
 import {Router} from '@angular/router';
 
 import {AppService} from '../app.service';
+import {FormGroup} from "@angular/forms";
 
 
 @Component({
@@ -30,6 +31,14 @@ logout(){
   this.appService.logout(()=>{
     this.router.navigateByUrl('/login');//navigateByUrl
   });
+
 }
+  clickService(){
+    this.router.navigateByUrl('/home/(contentOutlet:poste)');
+  }
+  // searchForm:FormGroup;
+  // search(){
+  //
+  // }
 
 }

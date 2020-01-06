@@ -16,22 +16,13 @@ import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule} from './app.routing.module';
 import { ProduitService} from './produit/produit.service';
-import { UserService} from "./user/user.service";
+
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AppService } from './app.service';
 import {XhrInterceptor} from './xhr.interceptor';
 import { UserComponent } from './user/user.component';
 import {principalReducer} from './shared/principal.reducer';
-import { CrudComponent } from './shared/crud/crud.component'
-
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { Ng2CarouselamosModule } from 'ng2-carouselamos';
-import { OwlModule } from 'ngx-owl-carousel';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ContactComponent } from './contact/contact.component';
-
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { OwlModule } from 'ngx-owl-carousel';
@@ -42,7 +33,10 @@ import { RegisterComponent } from './user/register/register.component';
 import {UserService} from "./services/userService";
 import {AuthenticationService} from "./services/authentication.service";
 import {AlertService} from "./services/alert.service";
-
+import { CrudComponent } from './shared/crud/crud.component';
+import { MyChartComponent } from './my-chart/my-chart.component';
+import { PostComponent } from './post/post.component'
+import {CommentService} from "./post/comment.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +55,10 @@ import {AlertService} from "./services/alert.service";
     HeaderComponent,
     FooterComponent,
     ContactComponent,
-    RegisterComponent
+    RegisterComponent,
+    MyChartComponent,
+    RegisterComponent,
+    PostComponent
 
   ],
   imports: [ // liste des modules externes
@@ -75,7 +72,11 @@ import {AlertService} from "./services/alert.service";
     Ng2CarouselamosModule,
     OwlModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartModule,
+    StoreModule.forRoot({principal: principalReducer}),
+    FormsModule
+
   ],
   providers: [
     ProduitMockService,
@@ -85,8 +86,11 @@ import {AlertService} from "./services/alert.service";
     CookieService,
     UserService,
     AuthenticationService,
-    AlertService
+    AlertService,
+    CommentService
   ], // contient la listes des services utiliseés dans l'application
   bootstrap: [AppComponent] // contient les point d'entre de notre programme
+// contient la listes des servicesutiliser dans notre app
+// contient les point d'entre de notre programme
 })
 export class AppModule { }

@@ -1,0 +1,7 @@
+
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit(); commentForm.reset();"  >
+
+   <input type="text"  formControlName="body"  placeholder="Commentaire"  required />
+
+  <button type="submit" >poste</button>
+</form>

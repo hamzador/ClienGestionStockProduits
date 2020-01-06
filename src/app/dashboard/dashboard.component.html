@@ -1,1 +1,44 @@
-<chart [type]="type" [data]="data" [options]="options"></chart>
+<div>
+<div>
+  <div class="row">
+    <div class="col-lg-5">
+      <app-my-chart
+        [type]="'bar'"
+        [title]="'Produits par catégorie'"
+        [data]="productsData"
+      >
+      </app-my-chart>
+    </div>
+    <div class="col-lg-7">
+      <app-my-chart
+        [type]="'line'"
+        [title]="'présentation linéaire des produits'"
+        [data]="productsData"
+      ></app-my-chart>
+    </div>
+  </div>
+</div>
+
+
+
+<hr color="red "/>
+<div class="row">
+  <div class="col-lg-7">
+    <app-my-chart
+      [type]="'line'"
+      [title]="'Réprésentation linéaire des utilisateurs'"
+      [data]="usersData"
+    >
+    </app-my-chart>
+  </div>
+  <div class="col-lg-5">
+    <app-my-chart
+      [type]="'bar'"
+      [title]="'Utilisateurs par role'"
+      [data]="usersData"
+    ></app-my-chart>
+  </div>
+</div>
+
+</div>
+

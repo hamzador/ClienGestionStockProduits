@@ -1,0 +1,12 @@
+a.clickable {
+
+  cursor: pointer;
+  cursor: hand;
+  /*color: #39ace7;*/
+  color:#1E90FF;
+  padding:.5rem 1rem;
+  border:1px solid transparent;
+  border-top-left-radius:.25rem;
+  border-top-right-radius:.25rem
+}
+
